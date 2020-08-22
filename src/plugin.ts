@@ -40,6 +40,9 @@ export default class Plugin extends EventEmitter {
     this.addMethod('listNames', () => {
       return listManager.names
     })
+    this.addMethod('listDescriptions', () => {
+      return listManager.descriptions
+    })
     this.addMethod('search', (...args: string[]) => {
       return this.handler.search(args)
     })
