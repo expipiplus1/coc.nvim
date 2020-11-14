@@ -339,7 +339,7 @@ class Renderer {
         return ''
       }
     }
-    if (text && text != href) return styles.blue(text)
+    if (text && href) return `[${styles.blue(text)}](${href})`
     let out = ''
     out += this.o.href(href)
     return this.o.link(out)
