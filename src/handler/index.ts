@@ -665,7 +665,7 @@ export default class Handler {
   }
 
   public async getCodeActions(doc: Document, range?: Range, only?: CodeActionKind[]): Promise<CodeAction[]> {
-    range = range || Range.create(0, 0, doc.lineCount, 0)
+    range = Range.create(3, 20, 3, 21)
     let diagnostics = diagnosticManager.getDiagnosticsInRange(doc.textDocument, range)
     let context: CodeActionContext = { diagnostics }
     if (only && Array.isArray(only)) context.only = only
